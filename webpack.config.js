@@ -3,7 +3,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const path = require('path')
 const webpack = require('webpack')
 const Dotenv = require('dotenv-webpack')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
   entry: path.resolve(__dirname, './src/index.js'),
@@ -47,7 +46,7 @@ module.exports = {
         },
       },
       {
-        test: /\.(css|sass|scss)$/,
+        test: /\.(sass|scss)$/,
         use: [
           'style-loader',
           'css-loader',
